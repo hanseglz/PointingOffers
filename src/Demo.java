@@ -1,11 +1,13 @@
-
+import java.util.Arrays;
 
 public class Demo {
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3,3,4};
-        for (int element:arr){
-            System.out.println(element);
+        int[][] demo = new int[3][4];
+        Arrays.fill(demo,0);
+        for (int i = 0; i < 3; i++){
+            System.out.println(demo[i]);
         }
+
     }
 }
