@@ -30,6 +30,13 @@ public class Test13 {
     }
 
     public static int bfs(int m, int n, int k){
+        /**
+         * 广度优先遍历
+         * 是队列，我加了队列 ！
+         * 在Java中，队列不能像栈、哈希表等通过Queue queue = new Queue()来实现
+         * LinkedList类实现了Queue接口，因此我们可以把LinkedList当成Queue来用。
+         */
+        //Java中boolean类型默认值是false
         boolean visited[][] = new boolean[m][n];
         int res = 0;
         Queue<int[]> queue = new LinkedList<int[]>();
