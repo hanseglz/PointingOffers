@@ -6,5 +6,6 @@ public class Demo {
         String str = "123";
         System.out.println(str.substring(3));
         System.out.println(str.substring(2));
+        System.out.println(str.substring(0,1));
     }
 }
