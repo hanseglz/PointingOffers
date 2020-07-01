@@ -26,6 +26,12 @@ public class Test27 {
     }
 
     public static TreeNode mirrorTree(TreeNode root){
+        /**
+         * 递归，递归，还是递归
+         *
+         * 时间复杂度：O(n)
+         * 空间复杂度：O(n)
+         */
         if (root == null)
             return root;
 
