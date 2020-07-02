@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Stack;
 
 public class Demo {
@@ -28,16 +30,11 @@ public class Demo {
     }
 
     public static void main(String[] args) {
-        Stack<Integer> stack1 = new Stack<>();
-        Stack<Integer> stack2 = new Stack<>();
-        stack1.push(1);
-        stack2.push(1);
-        System.out.println(stack1.peek() == stack2.peek());
-        System.out.println(stack1.peek().equals(stack2.peek()));
-
-        Testing obj = new Testing();
-        obj.push(1);
-        System.out.println(obj.judgeSame());
-        System.out.println(obj.judgeEqual());
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        System.out.println(list);
+        list.remove(list.size() - 1);
+        System.out.println(list);
     }
 }
