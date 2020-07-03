@@ -1,4 +1,8 @@
+import java.util.List;
+
 public class ListNodeDemo {
+
+    private static ListNode head = new ListNode(0);
 
     public static class ListNode{
         int val;
@@ -7,11 +11,12 @@ public class ListNodeDemo {
     }
 
     public static void main(String[] args) {
-        ListNode head = new ListNode(0);
-        ListNode tail = new ListNode(1);
-        head.next = tail;
-        ListNode flag = head;
-        System.out.println(flag.val);
-        System.out.println(flag.next.val);
+        int[] nums = {1,2,3,4,5};
+        for (int i = 0; i < 5; i++){
+            ListNode node = new ListNode(nums[i]);
+            head.next = node;
+            head = node;
+        }
+        System.out.println(head.next);
     }
 }
