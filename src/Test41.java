@@ -40,6 +40,6 @@ class MedianFinder{
     }
 
     public double findMedium(){
-
+        return 1.0;
     }
 }
