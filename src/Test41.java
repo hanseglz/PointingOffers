@@ -1,4 +1,6 @@
 import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class Test41 {
     /**
@@ -26,20 +28,31 @@ public class Test41 {
         System.out.println(obj.findMedium());
         obj.addNum(3);
         System.out.println(obj.findMedium());
+        obj.addNum(2);
+        System.out.println(obj.findMedium());
     }
 }
 
 class MedianFinder{
 
-    public MedianFinder(){
+    private Queue<Integer> queue1, queue2;
 
+    public MedianFinder(){
+        queue1 = new PriorityQueue<>();                      //小顶堆
+        queue2 = new PriorityQueue<>((x, y) -> (y - x));     //大顶堆
     }
 
     public void addNum(int num){
-
+        if (queue1.size() != queue2.size()){
+            queue1.add(num);
+            queue2.add(queue1.poll());
+        }else{
+            queue2.add(num);
+            queue1.add(queue2.poll());
+        }
     }
 
     public double findMedium(){
-        return 1.0;
+        return queue1.size() != queue2.size() ? queue1.peek() : (queue1.peek() + queue2.peek()) / 2.0;
     }
 }

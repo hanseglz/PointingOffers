@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class bubbleSortDemo {
+public class sortBubbleDemo {
     /**
      * 冒泡排序
      */
