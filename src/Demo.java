@@ -1,9 +1,9 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class Demo {
-
-
+    public static void main(String[] args) {
+        HashMap<Character, Integer> hashMap = new HashMap<>();
+        char c = (char)('a' + 1);
+        System.out.println(c);
+    }
 }
