@@ -16,6 +16,6 @@ public class Test48 {
      */
     public static int lengthOfLongestSubstring(String s){
         char[] chars = s.toCharArray();
-
+        return -1;
     }
 }

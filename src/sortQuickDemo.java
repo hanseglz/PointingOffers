@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class quickSortDemo {
+public class sortQuickDemo {
     /**
      * 快排
      * 设置两个变量i、j，排序开始的时候：i=0，j=N-1；
