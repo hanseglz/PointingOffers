@@ -1,5 +1,3 @@
-import javax.print.DocFlavor;
-import java.awt.geom.Dimension2D;
 import java.util.HashMap;
 
 public class Test35 {
