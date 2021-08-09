@@ -10,10 +10,13 @@ public class taskPicker {
         HashSet<Integer> hashSet = new HashSet<>();
 
         hashSet.add(1);
-        hashSet.add(15);
         hashSet.add(21);
         hashSet.add(20);
-        hashSet.add(95);
+        hashSet.add(31);
+        hashSet.add(53);
+        hashSet.add(70);
+        hashSet.add(94);
+        hashSet.add(560);
 
         Random r = new Random();
         int left = 1;
