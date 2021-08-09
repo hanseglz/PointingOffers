@@ -10,6 +10,8 @@ public class taskPicker {
         HashSet<Integer> hashSet = new HashSet<>();
 
         hashSet.add(1);
+        hashSet.add(95);
+        hashSet.add(15);
 
         Random r = new Random();
         int left = 1;
