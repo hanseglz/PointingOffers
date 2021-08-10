@@ -22,6 +22,8 @@ public class taskPicker {
         hashSet.add(121);
         hashSet.add(136);
         hashSet.add(141);
+        hashSet.add(155);
+        hashSet.add(160);
         hashSet.add(560);
 
         Random r = new Random();
