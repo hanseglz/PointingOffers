@@ -76,9 +76,10 @@ public class LC76 {
 
     public static String minWindowAnswer(String s, String t){
 
-        if (s.length() == 0 || t.length() == 0 || s.length() < t.length()) return "";
+        if (s.length() == 0 || t.length() == 0 || s.length() < t.length())
+            return "";
 
-        int[] tmap = new int[256]; //store the count of each character in t
+        int[] tmap = new int[256]; //store the count of each character in t, 26*2=52 should be okay though
         boolean[] tbmap = new boolean[256]; //store the appearance of each character in t
 
         for (int i = 0; i < t.length(); i++){
@@ -86,13 +87,13 @@ public class LC76 {
             tbmap[t.charAt(i)] = true;
         }
 
-        int i = 0, j = 0; //i and j stores the start and end index of substring
+        int start = 0, end = 0; //i and j stores the start and end index of substring
         int found  = 0; //found stores how many letters in t has been found in s
         int len = Integer.MAX_VALUE;
         String res = "";
 
-        while(j < s.length()){
-            char cj = s.charAt(j);
+        while(end < s.length()){
+            char cj = s.charAt(end);
             if(found < t.length()){  // we haven't found all the letters in t
                 if(tbmap[cj]){
                     if(tmap[cj] > 0) {   //the times cj appear in s is smaller than the times appears in t
@@ -100,23 +101,24 @@ public class LC76 {
                     }
                     tmap[cj]--;
                 }
-                j++;
+                end++;
             }
 
             while(found == t.length()){
-                char ci = s.charAt(i);
-                if(!tbmap[ci]) i++;  //ci in s is not in t
+                char ci = s.charAt(start);
+                if(!tbmap[ci])
+                    start++;  //ci in s is not in t
                 else if (tmap[ci] < 0){  //ci appears more times in s than t
                     tmap[ci]++;
-                    i++;
+                    start++;
                 }else{
-                    if(j-i < len){
-                        res = s.substring(i, j);
-                        len = j - i;
+                    if(end-start < len){
+                        res = s.substring(start, end);
+                        len = end - start;
                     }
                     found--;
                     tmap[ci]++;
-                    i++;
+                    start++;
                 }
             }
 
