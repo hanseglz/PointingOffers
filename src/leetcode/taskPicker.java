@@ -43,6 +43,7 @@ public class taskPicker {
         hashSet.add(543);
         hashSet.add(560);
         hashSet.add(617);
+        hashSet.add(763);
 
         Random r = new Random();
         int left = 1;
