@@ -1,7 +1,5 @@
 package leetcode;
 
-import apple.laf.JRSUIUtils;
-
 public class LC104 {
     /**
      * 104. Maximum Depth of Binary Tree
