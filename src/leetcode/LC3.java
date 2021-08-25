@@ -1,7 +1,6 @@
 package leetcode;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class LC3 {
     /**
