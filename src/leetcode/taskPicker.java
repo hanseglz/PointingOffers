@@ -31,6 +31,8 @@ public class taskPicker {
         hashSet.add(48);
         hashSet.add(49);
         hashSet.add(53);
+        hashSet.add(55);
+        hashSet.add(56);
         hashSet.add(70);
         hashSet.add(76);
         hashSet.add(94);
