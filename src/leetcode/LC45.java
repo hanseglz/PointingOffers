@@ -18,25 +18,27 @@ public class LC45 {
      * Jump 1 step from index 0 to 1, then 3 steps to the last index.
      */
     public static int jump(int[] nums) {
-        int res;
+        /**
+         * The optimal time complexity of this one is O(n).
+         * To achieve that, the method could be a little bit tricky to come up with.
+         * We traverse the array from start to nums.length - 1,
+         * each time, we record currently the furthest position we could make it,
+         * and if we are at the exact point of the furthest, we update it.
+         * Anyway, talk is cheap.
+         */
         if (nums.length == 1 || nums.length == 2)
-            return nums.length-1;
+            return nums.length - 1;
 
-        res = jump(nums, 0);
-        return res;
-    }
-
-    public static int jump(int[] nums, int count){
-        if (nums.length == 1)
-            return count;
-        if (nums[0] == 0)
-            return 10000;
-
-        int flag = 10000;
-        for (int i = 1; i <= nums[0] && i < nums.length; i++){
-            flag = Math.min(flag, jump(Arrays.copyOfRange(nums,i,nums.length), count + 1));
+        int flag = 0, furthest = 0, count = 0;
+        for (int i = 0; i < nums.length - 1; i++){
+            furthest = Math.max(furthest, i + nums[i]);
+            if (flag == i){
+                count++;
+                flag = furthest;
+            }
         }
-        return flag;
+
+        return count;
     }
 
     public static void main(String[] args) {
